@@ -1,0 +1,21 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: petrel-prototype
+spec:
+  environments:
+    - name: dev
+      build:
+        from: master
+
+  components:
+    - name: server
+      src: .
+      publicPort: http
+      ports:
+        - name: http
+          port: 3000
+
+  dnsAppAlias:
+    environment: dev
+    component: server
