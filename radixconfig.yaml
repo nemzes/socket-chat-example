@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: petrel-prototype
+  name: socket-chat-example
 spec:
   environments:
     - name: dev
